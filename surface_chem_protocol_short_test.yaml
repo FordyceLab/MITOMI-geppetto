@@ -40,7 +40,7 @@ steps:
     - name: Wash PBS
       duration: 5
       pressurize:
-        - NA
+        - Neutravidin
       depressurize:
         - PBS
     - name: Wash Antibody
