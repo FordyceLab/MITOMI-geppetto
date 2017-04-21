@@ -1,15 +1,15 @@
-PBS: 8
-Protein: 7
-Extra 1: 6
-Extra 2: 5
-Antibody: 4
-Neutravidin: 3
-bBSA: 2
-Waste: 1
-Out: 9
-Neck: 10
-Buttons 1: 11
-Sandwiches 1: 12
-Sandwiches 2: 13
-Buttons 2: 14
-In: 15
+PBS: 7
+Protein: 6
+Extra 1: 5
+Extra 2: 4
+Antibody: 3
+Neutravidin: 2
+bBSA: 1
+Waste: 0
+Out: 14
+Neck: 13
+Buttons 1: 12
+Sandwiches 1: 11
+Sandwiches 2: 10
+Buttons 2: 9
+In: 8
