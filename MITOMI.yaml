@@ -1,0 +1,78 @@
+ip_address: 192.168.1.3
+device_image: /MITOMI.png
+valves:
+    PBS:
+        valve_number: 1
+        initial_state: False
+        x_pos: 720
+        y_pos: 370
+    Protein:
+        valve_number: 2
+        initial_state: False
+        x_pos: 685
+        y_pos: 315
+    Extra 1:
+        valve_number: 3
+        initial_state: False
+        x_pos: 647
+        y_pos: 370
+    Extra 2:
+        valve_number: 4
+        initial_state: False
+        x_pos: 612
+        y_pos: 315
+    Antibody:
+        valve_number: 5
+        initial_state: False
+        x_pos: 574
+        y_pos: 370
+    Neutravidin:
+        valve_number: 6
+        initial_state: False
+        x_pos: 539
+        y_pos: 315
+    bBSA:
+        valve_number: 7
+        initial_state: False
+        x_pos: 501
+        y_pos: 370
+    Waste:
+        valve_number: 8
+        initial_state: False
+        x_pos: 466
+        y_pos: 315
+    Out:
+        valve_number: 15
+        initial_state: False
+        x_pos: 720
+        y_pos: 115
+    Neck:
+        valve_number: 14
+        initial_state: False
+        x_pos: 685
+        y_pos: 170
+    Buttons 1:
+        valve_number: 13
+        initial_state: False
+        x_pos: 647
+        y_pos: 115
+    Sandwiches 1:
+        valve_number: 12
+        initial_state: False
+        x_pos: 612
+        y_pos: 170
+    Sandwiches 2:
+        valve_number: 11
+        initial_state: False
+        x_pos: 574
+        y_pos: 115
+    Buttons 2:
+        valve_number: 10
+        initial_state: False
+        x_pos: 539
+        y_pos: 170
+    In:
+        valve_number: 9
+        initial_state: False
+        x_pos: 501
+        y_pos: 115
