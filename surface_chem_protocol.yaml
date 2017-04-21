@@ -31,12 +31,12 @@ steps:
         - bBSA
       depressurize:
         - PBS
-    - name: Wash NA
+    - name: Wash Neutravidin
       duration: 30
       pressurize:
         - PBS
       depressurize:
-        - NA
+        - Neutravidin
     - name: Wash PBS
       duration: 10
       pressurize:
@@ -83,16 +83,16 @@ steps:
         - bBSA
       depressurize:
         - PBS
-    - name: NA Wash 1
+    - name: Neutravidin Wash 1
       duration: 1800
       pressurize:
         - PBS
       depressurize:
-        - NA
+        - Neutravidin
     - name: PBS Wash 2
       duration: 600
       pressurize:
-        - NA
+        - Neutravidin
       depressurize:
         - PBS
     - name: Close buttons
