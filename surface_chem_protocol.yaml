@@ -97,7 +97,7 @@ steps:
         - PBS
     - name: Close buttons
       duration: 10
-      - pressurize:
+      pressurize:
         - PBS
         - Buttons 1
         - Buttons 2
