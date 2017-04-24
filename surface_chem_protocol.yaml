@@ -12,111 +12,115 @@ initial_settings:
       - Waste
       - Out
       - In
-    depressurize:
       - Neck
+    depressurize:
       - Buttons 1
       - Sandwiches 1
       - Sandwiches 2
       - Buttons 2
 steps:
-# Start by washing all to waste
+# Perform surface chemistry
     - name: Clear bBSA
       duration: 30
       depressurize:
         - Waste
         - bBSA
-    - name: Wash PBS
-      duration: 10
-      pressurize:
-        - bBSA
-      depressurize:
-        - PBS
-    - name: Wash Neutravidin
-      duration: 30
-      pressurize:
-        - PBS
-      depressurize:
-        - Neutravidin
-    - name: Wash PBS
-      duration: 10
-      pressurize:
-        - Neutravidin
-      depressurize:
-        - PBS
-    - name: Wash Antibody
-      duration: 30
-      pressurize:
-        - PBS
-      depressurize:
-        - Antibody
-    - name: Wash PBS
-      duration: 10
-      pressurize:
-        - Antibody
-      depressurize:
-        - PBS
-    - name: Wash Protein
-      duration: 30
-      pressurize:
-        - PBS
-      depressurize:
-        - Protein
-    - name: Wash PBS
-      duration: 10
-      pressurize:
-        - Antibody
-      depressurize:
-        - PBS
-
-# Then perform surface chemistry
     - name: bBSA Wash 1
       duration: 1800
       pressurize:
         - Waste
       depressurize:
-        - bBSA
         - In
         - Out
+    - name: Wash PBS
+      duration: 30
+      pressurize:
+        - In
+        - bBSA
+      depressurize:
+        - PBS
+        - Waste
     - name: PBS Wash 1
       duration: 600
       pressurize:
-        - bBSA
+        - Waste
       depressurize:
+        - In
+    - name: Wash Neutravidin
+      duration: 30
+      pressurize:
+        - In
         - PBS
+      depressurize:
+        - Neutravidin
+        - Waste
     - name: Neutravidin Wash 1
       duration: 1800
       pressurize:
-        - PBS
+        - Waste
       depressurize:
+        - In
+    - name: Wash PBS
+      duration: 30
+      pressurize:
+        - In
         - Neutravidin
+      depressurize:
+        - PBS
+        - Waste
     - name: PBS Wash 2
       duration: 600
       pressurize:
-        - Neutravidin
+        - Waste
       depressurize:
-        - PBS
+        - In
     - name: Close buttons
       duration: 10
       pressurize:
         - PBS
         - Buttons 1
         - Buttons 2
-    - name: bBSA Wash 2
-      duration: 1800
+    - name: Wash bBSA
+      duration: 30
+      pressurize:
+        - In
       depressurize:
         - bBSA
+        - Waste
+    - name: bBSA Wash 2
+      duration: 1800
+      pressurize:
+        - Waste
+      depressurize:
+        - In
+    - name: Wash PBS
+      duration: 30
+      pressurize:
+        - bBSA
+        - In
+      depressurize:
+        - PBS
+        - Waste
     - name: PBS Wash 3
       duration: 600
       pressurize:
-        - bBSA
+        - Waste
       depressurize:
+        - In
+    - name: Wash Antibody
+      duration: 30
+      pressurize:
         - PBS
+        - In
+      depressurize:
+        - Antibody
+        - Waste
     - name: Antibody
       duration: 300
       pressurize:
-        - PBS
+        - Waste
       depressurize:
-        - Antibody
+        - In
     - name: Open buttons
       duration: 600
       depressurize:
@@ -127,9 +131,61 @@ steps:
       pressurize:
         - Buttons 1
         - Buttons 2
+    - name: Wash PBS
+      duration: 30
+      pressurize:
+        - In
+        - Antibody
+      depressurize:
+        - Waste
+        - PBS
     - name: PBS Wash 4
       duration: 600
       pressurize:
-        - bBSA
+        - Waste
       depressurize:
+        - In
+    - name: Wash eGFP
+      duration: 30
+      pressurize:
+        - In
+        - PBS
+      depressurize:
+        - Protein
+        - Waste
+    - name: Flow eGFP with buttons closed
+      duration: 300
+      pressurize:
+        - Waste
+      depressurize:
+        - In
+    - name: Bind eGFP
+      duration: 1200
+      depressurize:
+        - Buttons 1
+        - Buttons 2
+    - name: Close buttons
+      duration: 10
+      pressurize:
+        - Buttons 1
+        - Buttons 2
+    - name: Wash PBS
+      duration: 30
+      pressurize:
+        - In
+        - Protein
+      depressurize:
+        - PBS
+        - Waste
+    - name: Flow PBS with buttons closed
+      duration: 600
+      pressurize:
+        - Waste
+      depressurize:
+        - In
+    - name: End
+      duration: 10
+      pressurize:
+        - In
+        - Out
         - PBS
